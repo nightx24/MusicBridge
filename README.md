@@ -108,7 +108,15 @@ The current starter version stores its local playlist on-device. Do not enter st
 
 Feature inspiration: [FreeYourMusic](https://freeyourmusic.com/), [Soundiiz](https://soundiiz.com/), and [TuneMyMusic](https://www.tunemymusic.com/).
 
-Open-source technical references to evaluate: [linsomniac/spotify_to_ytmusic](https://github.com/linsomniac/spotify_to_ytmusic), [sigma67/spotify_to_ytmusic](https://github.com/sigma67/spotify_to_ytmusic), and [ahnafnafee/songmirror](https://github.com/ahnafnafee/songmirror). Review each project's license, dependencies, and integration assumptions before reusing code.
+Open-source technical references to evaluate:
+
+- [mahdi-y/Spotify2YoutubeMusic](https://github.com/mahdi-y/Spotify2YoutubeMusic) — playlist and liked-song migration, track-match caching, progress reporting, and resume behavior.
+- [loading-pk/Spotify-to-Youtube-Music](https://github.com/loading-pk/Spotify-to-Youtube-Music) — additional Spotify-to-YouTube Music implementation to inspect before adapting.
+- [NoxbaneSudo/Migratify](https://github.com/NoxbaneSudo/Migratify) — CSV imports, duration-aware matching, failed-track reports, and resumable migration.
+- [linsomniac/spotify_to_ytmusic](https://github.com/linsomniac/spotify_to_ytmusic) and [sigma67/spotify_to_ytmusic](https://github.com/sigma67/spotify_to_ytmusic) — focused Spotify playlist transfer references.
+- [ahnafnafee/songmirror](https://github.com/ahnafnafee/songmirror) — broader multi-service transfer architecture and track matching.
+
+These are reference projects, not integrated code. Before reusing any implementation, inspect the exact repository files, license, dependencies, authentication method, and current maintenance status. Prefer provider-approved authorization; unofficial YouTube Music interfaces may break and should not be treated as guaranteed stable.
 
 ## License
 
