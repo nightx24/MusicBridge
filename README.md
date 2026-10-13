@@ -96,9 +96,9 @@ A compatibility matrix will be maintained per service and per operation (read pl
 
 This roadmap is aspirational. Each milestone needs implementation, build verification, and tests before it can be described as complete.
 
-## Build
+## Build and account integration setup
 
-Open this project in Android Studio with Android SDK 35 installed, or use the GitHub Actions workflow to build a debug APK.
+Open this project in Android Studio with Android SDK 35 installed, or use the GitHub Actions workflow to build a debug APK. For the account-connection plan and provider configuration requirements, see [INTEGRATION_SETUP.md](INTEGRATION_SETUP.md). The current app still does not connect accounts or transfer playlists.
 
 ## Privacy
 
