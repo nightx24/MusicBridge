@@ -1,5 +1,7 @@
 # MusicBridge
 
+[![Android Debug APK](https://github.com/nightx24/MusicBridge/actions/workflows/android.yml/badge.svg?branch=main)](https://github.com/nightx24/MusicBridge/actions/workflows/android.yml)
+
 **MusicBridge is planned as a free, open-source Android music-library transfer and management app.** Its goal is to bring together the kinds of playlist transfer, synchronization, backup, import/export, and playlist-management tools offered by FreeYourMusic, Soundiiz, and TuneMyMusic.
 
 The long-term goal is broad feature coverage—not a promise that every service or operation will be available immediately. Each feature depends on the destination service's supported APIs, authorization rules, rate limits, and terms.
