@@ -1,9 +1,7 @@
 package com.musicbridge.app
 
-import android.content.ContentResolver
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
@@ -100,7 +98,7 @@ private fun MusicBridgeScreen(
             .map { jsonToTracks(it) }
             .onSuccess { imported ->
                 tracks = imported
-                onSave(tracks)
+                onSave(imported)
                 message = "Imported ${imported.size} tracks."
             }
             .onFailure { message = "Import failed. Choose a valid MusicBridge JSON backup." }
