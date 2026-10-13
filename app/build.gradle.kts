@@ -1,8 +1,19 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
 }
+
+val localProps = Properties().apply {
+    val file = rootProject.file("local.properties")
+    if (file.exists()) file.inputStream().use { load(it) }
+}
+
+fun configValue(name: String): String = (
+    localProps.getProperty(name) ?: System.getenv(name) ?: ""
+).trim()
 
 android {
     namespace = "com.musicbridge.app"
@@ -16,7 +27,14 @@ android {
         versionName = "0.1.0"
     }
 
-    buildFeatures { compose = true }
+    buildFeatures {
+        compose = true
+        buildConfig = true
+    }
+    defaultConfig {
+        buildConfigField("String", "SPOTIFY_CLIENT_ID", "\\"${configValue("SPOTIFY_CLIENT_ID")}\\"")
+        buildConfigField("String", "YOUTUBE_OAUTH_CLIENT_ID", "\\"${configValue("YOUTUBE_OAUTH_CLIENT_ID")}\\"")
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
