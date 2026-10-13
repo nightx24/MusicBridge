@@ -32,8 +32,8 @@ android {
         buildConfig = true
     }
     defaultConfig {
-        buildConfigField("String", "SPOTIFY_CLIENT_ID", "\\"${configValue("SPOTIFY_CLIENT_ID")}\\"")
-        buildConfigField("String", "YOUTUBE_OAUTH_CLIENT_ID", "\\"${configValue("YOUTUBE_OAUTH_CLIENT_ID")}\\"")
+        buildConfigField("String", "SPOTIFY_CLIENT_ID", "\"${configValue("SPOTIFY_CLIENT_ID")}\"")
+        buildConfigField("String", "YOUTUBE_OAUTH_CLIENT_ID", "\"${configValue("YOUTUBE_OAUTH_CLIENT_ID")}\"")
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
